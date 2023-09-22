@@ -1,1 +1,1 @@
-print("AC") if input() == "Hello,World!" else print("WA")
+print("AC" if input() == "Hello,World!" else "WA")

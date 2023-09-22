@@ -13,4 +13,4 @@ def is_post_code(S, A):
 
 A, B = map(int, input().split())
 S = input()
-print("Yes") if is_post_code(S, A) else print("No")
+print("Yes" if is_post_code(S, A) else "No")
