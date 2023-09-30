@@ -4,7 +4,7 @@ K = int(input())
 def calc_321(n):
     N = str(n)
     (ans := True) if len(N) == 1 else (ans := False)
-    if ans == False:
+    if ans is False:
         for i in range(len(N) - 1):
             if int(N[i]) > int(N[i + 1]):
                 ans = True
@@ -14,7 +14,7 @@ def calc_321(n):
     return ans
 
 
-i = c = 0 
+i = c = 0
 while c < K:
     i += 1
     if calc_321(i):
