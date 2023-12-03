@@ -2,8 +2,9 @@
 # import collections
 # import copy
 # import heapq
-# import itertools
-# import math
+import itertools
+import math
+
 # import string
 import sys
 
@@ -26,5 +27,17 @@ def inp_ls():
     return list(sys.stdin.readline().rstrip().split())
 
 
-N = inp_i()
-A = [inp_li() for _ in range(N)]
+def main():
+    n, p, q = inp_li()
+    print(
+        sum(
+            map(
+                lambda x: 1 if math.prod(x) % p == q else 0,
+                itertools.combinations(inp_li(), 5),
+            )
+        )
+    )
+
+
+if __name__ == "__main__":
+    main()
