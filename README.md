@@ -6,19 +6,22 @@
 acc new [abc000]
 ```
 ### 次の問題用dir作成
+- コンテストdirで実行
 ```
 acc add
 ```
 ### テストの実行
-- 問題dir内で実行
+- 問題dirで実行
 ```
 oj t -c "python main.py"
 ```
 ### 提出
-- 問題dir内で実行
+- 問題dirで実行
 ```
 acc submit
 ```
+### オプション
+- `-c [all,inquire,etc..]`を`acc new`,`acc add`とかでつけると問題の選択なりなんなりが出来る
 ## その他
 ### acc設定ファイルとかのパス表示
 ```
