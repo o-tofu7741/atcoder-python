@@ -12,13 +12,21 @@ acc add
 ```
 ### テストの実行
 - 問題dirで実行
+- `test-py`は`oj~`のエイリアス
+```
+test-py
+```
 ```
 oj t -c "python main.py"
 ```
 ### 提出
 - 問題dirで実行
+- `submit-py`は`acc~`のエイリアス
 ```
-acc submit
+submit-py
+```
+```
+acc s main.py -- --guess-python-interpreter pypy -w 0 -y
 ```
 ### オプション
 - `-c [all,inquire,etc..]`を`acc new`,`acc add`とかでつけると問題の選択なりなんなりが出来る
