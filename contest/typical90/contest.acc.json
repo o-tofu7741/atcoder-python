@@ -9,13 +9,21 @@
       "id": "typical90_a",
       "label": "001",
       "title": "Yokan Party（★4）",
-      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_a"
+      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_a",
+      "directory": {
+        "path": "001",
+        "submit": "main.py"
+      }
     },
     {
       "id": "typical90_b",
       "label": "002",
       "title": "Encyclopedia of Parentheses（★3）",
-      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_b"
+      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_b",
+      "directory": {
+        "path": "002",
+        "submit": "main.py"
+      }
     },
     {
       "id": "typical90_c",
@@ -99,7 +107,12 @@
       "id": "typical90_p",
       "label": "016",
       "title": "Minimum Coins（★3）",
-      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_p"
+      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_p",
+      "directory": {
+        "path": "016",
+        "testdir": "test",
+        "submit": "main.py"
+      }
     },
     {
       "id": "typical90_q",
