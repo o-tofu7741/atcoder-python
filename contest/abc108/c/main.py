@@ -28,9 +28,14 @@ def inp_ls():
 
 def main():
     N, K = inp_li()
-    ans = sum(map(lambda x: 1 if x % K == 0 else 0, range(1, N + 1))) ** 3
-    
-    print(ans)
+    a = N // K
+    b = 0
+
+    if K % 2 == 0:
+        b = N // K
+        if K // 2 <= N % K:
+            b += 1
+    print(a**3 + b**3)
 
 
 if __name__ == "__main__":
