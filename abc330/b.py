@@ -2,12 +2,10 @@ N, L, R = map(int, input().split())
 A = list(map(int, input().split()))
 ans = []
 for a in A:
-    for x in range(L, R + 1):
-        for y in range(L, R + 1):
-            if abs(x - a) <= abs(y - a):
-                pass
-            else:
-                break
-        else:
-            ans.append(str(x))
+    if a <= L:
+        ans.append(str(L))
+    elif L < a < R:
+        ans.append(str(a))
+    else:
+        ans.append(str(R))
 print(" ".join(ans))
