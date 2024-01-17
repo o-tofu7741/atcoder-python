@@ -1,5 +1,5 @@
 # import bisect
-# import collections
+import collections
 # import copy
 # import heapq
 # import itertools
@@ -28,7 +28,14 @@ def inp_ls():
 
 def main():
     N = inp_i()
-    A = [inp_li() for _ in range(N)]
+    S = [inp_s() for _ in range(N)]
+
+    num = collections.Counter(S)
+    mx = max(num.values())
+
+    for key in sorted(num):
+        if num[key] == mx:
+            print(key)
 
 
 if __name__ == "__main__":
