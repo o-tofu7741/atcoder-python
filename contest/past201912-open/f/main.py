@@ -1,0 +1,39 @@
+# import bisect
+# import collections
+# import copy
+# import heapq
+# import itertools
+# import math
+# import string
+import sys
+
+# import numpy
+
+
+def inp_i():
+    return int(sys.stdin.readline().rstrip())
+
+
+def inp_li():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+def inp_s():
+    return sys.stdin.readline().rstrip()
+
+
+def inp_ls():
+    return list(sys.stdin.readline().rstrip().split())
+
+
+def main():
+    S = inp_s()
+    ans = []
+    i = 0
+    while i < len(S):
+        j = i + 1
+        while S[i] != S[j] and
+
+
+if __name__ == "__main__":
+    main()
