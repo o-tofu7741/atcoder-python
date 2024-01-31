@@ -26,7 +26,12 @@
       "id": "abc139_c",
       "label": "C",
       "title": "Lower",
-      "url": "https://atcoder.jp/contests/abc139/tasks/abc139_c"
+      "url": "https://atcoder.jp/contests/abc139/tasks/abc139_c",
+      "directory": {
+        "path": "c",
+        "testdir": "test",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc139_d",
