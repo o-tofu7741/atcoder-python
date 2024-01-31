@@ -29,10 +29,20 @@ def inp_ls():
 def main():
     S = inp_s()
     ans = []
+    flag = True
     i = 0
-    while i < len(S):
-        j = i + 1
-        while S[i] != S[j] and
+    for s in S:
+        if s.isupper():
+            if flag:
+                flag = False
+                ans += [s]
+            else:
+                flag = True
+                i += 1
+                ans[-1] += s
+        else:
+            ans[-1] += s
+    print("".join(sorted(ans, key=str.lower)))
 
 
 if __name__ == "__main__":
