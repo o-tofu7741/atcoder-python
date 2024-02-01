@@ -57,13 +57,13 @@ default-template: python
 ```
 #### main.py
 ```
-# import bisect
-# import collections
-# import copy
-# import heapq
-# import itertools
-# import math
-# import string
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
 import sys
 
 # import numpy
@@ -85,6 +85,10 @@ def inp_ls():
     return list(sys.stdin.readline().rstrip().split())
 
 
-N = inp_i()
-A = [inp_li() for _ in range(N)]
+def main():
+    
+
+
+if __name__ == "__main__":
+    main()
 ```
