@@ -384,7 +384,12 @@
       "id": "typical90_bf",
       "label": "058",
       "title": "Original Calculator（★4）",
-      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_bf"
+      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_bf",
+      "directory": {
+        "path": "058",
+        "testdir": "test",
+        "submit": "main.py"
+      }
     },
     {
       "id": "typical90_bg",
@@ -504,7 +509,12 @@
       "id": "typical90_bz",
       "label": "078",
       "title": "Easy Graph Problem（★2）",
-      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_bz"
+      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_bz",
+      "directory": {
+        "path": "078",
+        "testdir": "test",
+        "submit": "main.py"
+      }
     },
     {
       "id": "typical90_ca",
@@ -540,7 +550,12 @@
       "id": "typical90_cf",
       "label": "084",
       "title": "There are two types of characters（★3）",
-      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_cf"
+      "url": "https://atcoder.jp/contests/typical90/tasks/typical90_cf",
+      "directory": {
+        "path": "084",
+        "testdir": "test",
+        "submit": "main.py"
+      }
     },
     {
       "id": "typical90_cg",
