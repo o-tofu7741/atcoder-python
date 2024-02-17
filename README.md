@@ -43,7 +43,7 @@ default-test-dirname-format: test
 default-task-choice: next
 default-template: python
 ```
-### `config.json`
+### config.json
 ```
 {
 	"oj-path": "C:\\github\\atcoder-python\\.venv\\Scripts\\oj.exe",
