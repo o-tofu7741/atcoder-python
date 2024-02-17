@@ -1,10 +1,11 @@
-import bisect
-import collections
-import copy
-import heapq
+# import bisect
+# import collections
+# import copy
+# import heapq
 import itertools
-import math
-import string
+
+# import math
+# import string
 import sys
 
 # import numpy
@@ -29,36 +30,28 @@ def inp_ls():
 def main():
     M, N = inp_li()
     K = inp_i()
-    # numpyを用いた二次元累積和
-    # J = [[0] + [0 for j in range(N)] for i in range(M)]
-    # O = [[0] + [0 for j in range(N)] for i in range(M)]
-    # I = [[0] + [0 for j in range(N)] for i in range(M)]
-    Area = [list(inp_s()) for _ in range(M)]
-    J = [[0] + list(itertools.accumulate(map(lambda x: 1 if x == "J" else 0, lst))) for lst in Area]
-    O = [[0] + list(itertools.accumulate(map(lambda x: 1 if x == "O" else 0, lst))) for lst in Area]
-    # # 繰り返し処理を用いて累積和にJOIの個数を格納
-    # for i in range(M):
-    #     sum1 = 0
-    #     sum2 = 0
-    #     # sum3 = 0
-    #     for j in range(N):
-    #         if Area[i][j] == "J":
-    #             sum1 += 1
-    #         if Area[i][j] == "O":
-    #             sum2 += 1
-    #         # if Area[i][j] == "I":
-    #         #     sum3 += 1
-    #         J[i][j + 1] = sum1
-    #         O[i][j + 1] = sum2
-    #         # I[i][j + 1] = sum3
-    # print(J)
+    area = [list(inp_s()) for _ in range(M)]
+
+    j_n_acc = [
+        [0] + list(itertools.accumulate(map(lambda x: 1 if x == "J" else 0, lst))) for lst in area
+    ]
+    o_n_acc = [
+        [0] + list(itertools.accumulate(map(lambda x: 1 if x == "O" else 0, lst))) for lst in area
+    ]
+    # j_m_acc = list(zip(*[[0] + list(itertools.accumulate(lst)) for lst in zip(*j_n_acc)]))
+    # o_m_acc = list(zip(*[[0] + list(itertools.accumulate(lst)) for lst in zip(*o_n_acc)]))
+    j_mn_acc = [[0] * (N + 1) for _ in range(M + 1)]
+    o_mn_acc = [[0] * (N + 1) for _ in range(M + 1)]
+    for m in range(1, M + 1):
+        for n in range(1, N + 1):
+            j_mn_acc[m][n] += j_mn_acc[m - 1][n] + j_n_acc[m - 1][n]
+            o_mn_acc[m][n] += o_mn_acc[m - 1][n] + o_n_acc[m - 1][n]
+
     for _ in range(K):
         ans1 = ans2 = 0
         a, b, c, d = inp_li()
-        for m in range(a - 1, c):
-            ans1 = ans1 + J[m][d] - J[m][b - 1]
-            ans2 = ans2 + O[m][d] - O[m][b - 1]
-            # ans3 = ans3 + I[m][d] - I[m][b - 1]
+        ans1 = j_mn_acc[c][d] - j_mn_acc[a - 1][d] - j_mn_acc[c][b - 1] + j_mn_acc[a - 1][b - 1]
+        ans2 = o_mn_acc[c][d] - o_mn_acc[a - 1][d] - o_mn_acc[c][b - 1] + o_mn_acc[a - 1][b - 1]
         print(ans1, ans2, (c - a + 1) * (d - b + 1) - ans1 - ans2)
 
 
