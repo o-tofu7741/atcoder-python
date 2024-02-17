@@ -43,6 +43,17 @@ default-test-dirname-format: test
 default-task-choice: next
 default-template: python
 ```
+### `config.json`
+```
+{
+	"oj-path": "C:\\github\\atcoder-python\\.venv\\Scripts\\oj.exe",
+	"default-contest-dirname-format": "{ContestID}",
+	"default-task-dirname-format": "{tasklabel}",
+	"default-test-dirname-format": "test",
+	"default-task-choice": "inquire",
+	"default-template": "python"
+}
+```
 ### python用設定
 #### template.json
 ```
