@@ -12,22 +12,40 @@ acc add
 ```
 ### テストの実行
 - 問題dirで実行
-- `test-py`は`oj~`のエイリアス
+- `tpy`は`oj~`のエイリアス
+  - エイリアスは`$PROFILE`に記載
 ```
-test-py
+tpy
 ```
 ```
 oj t -c "python main.py"
 ```
 ### 提出
 - 問題dirで実行
-- `submit-py`は`acc~`のエイリアス
+- 各種コマンドは`acc~`のエイリアス
+#### pypy
 ```
-submit-py
+spp
 ```
 ```
 acc s main.py -- --guess-python-interpreter pypy -w 0 -y
 ```
+#### CPython
+```
+spy
+```
+```
+acc s main.py -- -l 5055 -w 0 -y
+```
+5055 : CPythonの言語ID
+#### Cython
+```
+scy
+```
+```
+acc s main.py -- -l 5082 -w 0 -y
+```
+5082 : Cythonの言語ID
 ### オプション
 - `-c [all,inquire,etc..]`を`acc new`,`acc add`とかでつけると問題の選択なりなんなりが出来る
 ## その他
@@ -54,7 +72,7 @@ default-template: python
 	"default-template": "python"
 }
 ```
-### python用設定
+### テンプレート用設定
 #### template.json
 ```
 {
