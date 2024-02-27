@@ -20,7 +20,12 @@
       "id": "agc024_b",
       "label": "B",
       "title": "Backfront",
-      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_b"
+      "url": "https://atcoder.jp/contests/agc024/tasks/agc024_b",
+      "directory": {
+        "path": "b",
+        "testdir": "test",
+        "submit": "main.py"
+      }
     },
     {
       "id": "agc024_c",
