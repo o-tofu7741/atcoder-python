@@ -15,7 +15,7 @@ acc add
 - `tpy`は`oj~`のエイリアス
   - エイリアスは`$PROFILE`に記載
 ```
-tpy
+t-py
 ```
 ```
 oj t -c "python main.py"
@@ -25,14 +25,14 @@ oj t -c "python main.py"
 - 各種コマンドは`acc~`のエイリアス
 #### pypy
 ```
-spp
+s-pp
 ```
 ```
 acc s main.py -- --guess-python-interpreter pypy -w 0 -y
 ```
 #### CPython
 ```
-spy
+s-py
 ```
 ```
 acc s main.py -- -l 5055 -w 0 -y
@@ -40,7 +40,7 @@ acc s main.py -- -l 5055 -w 0 -y
 5055 : CPythonの言語ID
 #### Cython
 ```
-scy
+s-cy
 ```
 ```
 acc s main.py -- -l 5082 -w 0 -y
