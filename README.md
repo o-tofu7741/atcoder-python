@@ -25,7 +25,7 @@ oj t -c "python main.py"
 - 各種コマンドは`acc~`のエイリアス
 #### pypy
 ```
-s-pp
+s-pypy
 ```
 ```
 acc s main.py -- --guess-python-interpreter pypy -w 0 -y
