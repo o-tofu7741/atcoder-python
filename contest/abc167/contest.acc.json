@@ -15,7 +15,12 @@
       "id": "abc167_b",
       "label": "B",
       "title": "Easy Linear Programming",
-      "url": "https://atcoder.jp/contests/abc167/tasks/abc167_b"
+      "url": "https://atcoder.jp/contests/abc167/tasks/abc167_b",
+      "directory": {
+        "path": "b",
+        "testdir": "test",
+        "submit": "main.py"
+      }
     },
     {
       "id": "abc167_c",
@@ -27,12 +32,7 @@
       "id": "abc167_d",
       "label": "D",
       "title": "Teleporter",
-      "url": "https://atcoder.jp/contests/abc167/tasks/abc167_d",
-      "directory": {
-        "path": "d",
-        "testdir": "test",
-        "submit": "main.py"
-      }
+      "url": "https://atcoder.jp/contests/abc167/tasks/abc167_d"
     },
     {
       "id": "abc167_e",
