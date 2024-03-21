@@ -27,11 +27,9 @@ def inp_ls():
 
 
 def main():
-    n, m = inp_li()
-    if m >= 2 * n:
-        print(n + (m - 2 * n) // 4)
-    else:
-        print(m // 2)
+    a, b, c, x, y = inp_li()
+    ans = 10e5 * 2 * 5000
+    print(min(a * x + b * y, (c * 2 * min(x, y))))
 
 
 if __name__ == "__main__":

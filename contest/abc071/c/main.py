@@ -27,11 +27,24 @@ def inp_ls():
 
 
 def main():
-    n, m = inp_li()
-    if m >= 2 * n:
-        print(n + (m - 2 * n) // 4)
+    n = inp_i()
+    a = inp_li()
+    k1 = 0
+    for k, v in sorted(collections.Counter(a).items(), reverse=True):
+        if v > 3:
+            if k1:
+                print(k1 * k)
+            else:
+                print(k * k)
+            exit()
+        elif v > 1:
+            if k1:
+                print(k1 * k)
+                exit()
+            else:
+                k1 = k
     else:
-        print(m // 2)
+        print(0)
 
 
 if __name__ == "__main__":
