@@ -1,0 +1,50 @@
+{
+  "contest": {
+    "id": "cpsco2019-s4",
+    "title": "CPSCO2019 Session4",
+    "url": "https://atcoder.jp/contests/cpsco2019-s4"
+  },
+  "tasks": [
+    {
+      "id": "cpsco2019_s4_a",
+      "label": "A",
+      "title": "Swimming",
+      "url": "https://atcoder.jp/contests/cpsco2019-s4/tasks/cpsco2019_s4_a"
+    },
+    {
+      "id": "cpsco2019_s4_b",
+      "label": "B",
+      "title": "Meeting",
+      "url": "https://atcoder.jp/contests/cpsco2019-s4/tasks/cpsco2019_s4_b"
+    },
+    {
+      "id": "cpsco2019_s4_c",
+      "label": "C",
+      "title": "Make a Team",
+      "url": "https://atcoder.jp/contests/cpsco2019-s4/tasks/cpsco2019_s4_c"
+    },
+    {
+      "id": "cpsco2019_s4_d",
+      "label": "D",
+      "title": "Boring Sequence",
+      "url": "https://atcoder.jp/contests/cpsco2019-s4/tasks/cpsco2019_s4_d"
+    },
+    {
+      "id": "cpsco2019_s4_e",
+      "label": "E",
+      "title": "ox Concatenation",
+      "url": "https://atcoder.jp/contests/cpsco2019-s4/tasks/cpsco2019_s4_e",
+      "directory": {
+        "path": "e",
+        "testdir": "test",
+        "submit": "main.py"
+      }
+    },
+    {
+      "id": "cpsco2019_s4_f",
+      "label": "F",
+      "title": "Lost Tree",
+      "url": "https://atcoder.jp/contests/cpsco2019-s4/tasks/cpsco2019_s4_f"
+    }
+  ]
+}
