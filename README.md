@@ -89,6 +89,7 @@ default-template: python
 import bisect
 import collections
 import copy
+import functools
 import heapq
 import itertools
 import math
@@ -96,6 +97,8 @@ import string
 import sys
 
 # import numpy
+
+INF = 10**18
 
 
 def inp_i():
