@@ -1,11 +1,12 @@
-import bisect
+# import bisect
 import collections
-import copy
-import functools
-import heapq
-import itertools
-import math
-import string
+
+# import copy
+# import functools
+# import heapq
+# import itertools
+# import math
+# import string
 import sys
 
 # import numpy
@@ -35,25 +36,37 @@ def main():
     q = collections.deque([])
     ans = 0
     pt = ((0, 1), (1, 0), (-1, 0), (0, -1))
+    checked = [0] * h
 
     while True:
-        cnt = 0
+        fin = 0
         for y in range(h):
-            if "#" in a[y]:
-                if "." not in a[y]:
-                    cnt += 1
-                for x in range(w):
-                    if a[y][x] == "#":
-                        q.append((x, y))
-            else:
+            if checked[y]:
+                fin += 1
                 continue
-        if cnt == h:
+            cnt = 0
+            for x in range(w):
+                if a[y][x] == "#":
+                    q.append((x, y))
+                elif a[y][x] == "-":
+                    continue
+                else:
+                    cnt += 1
+            if cnt == 0:
+                checked[y] = 1
+                fin += 1
+        if fin == h:
             break
         while len(q) > 0:
             bx, by = q.popleft()
             for px, py in pt:
-                if (0 <= bx + px < w) and (0 <= by + py < h):
+                if (
+                    (0 <= bx + px < w)
+                    and (0 <= by + py < h)
+                    and a[by + py][bx + px] == "."
+                ):
                     a[by + py][bx + px] = "#"
+            a[by][bx] = "-"
         ans += 1
     print(ans)
 
