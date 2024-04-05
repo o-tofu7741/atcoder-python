@@ -34,41 +34,23 @@ def main():
     h, w = inp_li()
     a = [list(inp_s()) for _ in range(h)]
     q = collections.deque([])
-    ans = 0
     pt = ((0, 1), (1, 0), (-1, 0), (0, -1))
-    checked = [0] * h
+    dist = [[-1] * w for _ in range(h)]
 
-    while True:
-        fin = 0
-        for y in range(h):
-            if checked[y]:
-                fin += 1
-                continue
-            cnt = 0
-            for x in range(w):
-                if a[y][x] == "#":
-                    q.append((x, y))
-                elif a[y][x] == "-":
-                    continue
-                else:
-                    cnt += 1
-            if cnt == 0:
-                checked[y] = 1
-                fin += 1
-        if fin == h:
-            break
-        while len(q) > 0:
-            bx, by = q.popleft()
-            for px, py in pt:
-                if (
-                    (0 <= bx + px < w)
-                    and (0 <= by + py < h)
-                    and a[by + py][bx + px] == "."
-                ):
-                    a[by + py][bx + px] = "#"
-            a[by][bx] = "-"
-        ans += 1
-    print(ans)
+    for y in range(h):
+        for x in range(w):
+            if a[y][x] == "#":
+                q.append((x, y))
+                dist[y][x] = 0
+    while len(q) > 0:
+        x, y = q.popleft()
+        for px, py in pt:
+            nx = x + px
+            ny = y + py
+            if 0 <= nx < w and 0 <= ny < h and dist[ny][nx] == -1:
+                dist[ny][nx] = dist[y][x] + 1
+                q.append((nx, ny))
+    print(max(map(max, dist)))
 
 
 if __name__ == "__main__":
