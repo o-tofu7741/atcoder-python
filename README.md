@@ -68,11 +68,12 @@ default-template: python
 	"default-contest-dirname-format": "{ContestID}",
 	"default-task-dirname-format": "{tasklabel}",
 	"default-test-dirname-format": "test",
-	"default-task-choice": "inquire",
+	"default-task-choice": "all",
 	"default-template": "python"
 }
 ```
 ### テンプレート用設定
+pythonディレクトリ下に配置
 #### template.json
 ```
 {
