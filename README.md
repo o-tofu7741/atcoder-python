@@ -68,7 +68,7 @@ default-template: python
 	"default-contest-dirname-format": "{ContestID}",
 	"default-task-dirname-format": "{tasklabel}",
 	"default-test-dirname-format": "test",
-	"default-task-choice": "all",
+	"default-task-choice": "inquire",
 	"default-template": "python"
 }
 ```
